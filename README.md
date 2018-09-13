@@ -4,7 +4,31 @@
 
 ## 运行
 
-首先编译 `em-dosbox`，编译方法参见 [dreamlayers/em-dosbox: An Emscripten port of DOSBox](https://github.com/dreamlayers/em-dosbox)。将编译出的 `em-dosbox/src/dosbox.js` 和 `em-dosbox/src/dosbox.html.mem` 移动至 `static/dosbox` 文件夹下。然后运行 `generate.py` 生成 `game.data` 文件。最后运行 `app.py`
+### 克隆仓库
+
+由于历史原因，git 历史内包含游戏的二进制文件，仓库较大。使用 `git clone --depth=1 https://github.com/rwv/chinese-dos-games.git` 来减少文件大小。
+
+### 下载游戏文件
+
+在根目录下运行 Python 3 脚本 `download_data.py`
+
+若下载出错请参见 [Issue #26](https://github.com/rwv/chinese-dos-games/issues/26)
+
+### 安装 Flask
+
+运行以下命令安装 Flask
+
+``` sh
+$ pip3 install flask
+```
+
+### 运行网页
+
+使用 Python 3 运行 `app.py`
+
+``` sh
+$ python3 app.py
+```
 
 ## 游戏列表
 
@@ -14,7 +38,6 @@
 * 同级生 2
 * 大富翁3
 * 明星志愿1
-* 三国志IV
 * 金庸群侠传
 * 轩辕剑1
 * 轩辕剑2
@@ -26,6 +49,7 @@
 * 银河英雄传说III SP
 * 三国志II
 * 三国志III
+* 三国志IV
 * 三国志V
 * 三国志V 威力加强版
 * 三国志英杰传
@@ -38,16 +62,27 @@
 * 信长之野望·天翔记
 * 信长之野望·霸王传
 * 金瓶梅之偷情宝鉴
-
+* 江南才子唐伯虎
+* 暗棋圣手
+* 太阁立志传
+* 非洲探险2
+* 航空霸业2
+* 中国球王
+* 艾蒂丝魔法大冒险
+* 卧龙传
 
 ## Known issues
 
 * 游戏界面在游戏运行时会改变 `<title>`
-* `packager.py` 产生的 Javascript 脚本包含主机的路径信息，需要去除。
 
 ## Contributing
 
-欢迎提 Issue 和 Pull request 来增加新的游戏!
+欢迎提 [Issue](https://github.com/rwv/chinese-dos-games/issues) 和 [Pull request](https://github.com/rwv/chinese-dos-games/pulls) 来增加新的游戏!
+
+PR 具体参见 [CONTRIBUTING.md](https://github.com/rwv/chinese-dos-games/blob/master/CONTRIBUTING.md)
 
 ## Credits
-[dreamlayers/em-dosbox: An Emscripten port of DOSBox](https://github.com/dreamlayers/em-dosbox)
+
+* [dreamlayers/em-dosbox: An Emscripten port of DOSBox](https://github.com/dreamlayers/em-dosbox)
+* [db48x/emularity: easily embed emulators](https://github.com/db48x/emularity)
+
